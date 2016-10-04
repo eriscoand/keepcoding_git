@@ -28,25 +28,26 @@ Al realizar el comando "git merge master" estando en la rama styled me ha mostra
 
 “Already up-to-date”
 
-Este mensaje significa que todos los canvios de la rama que estamos intentando hacer el merge ya esta incluida
+Este mensaje significa que todos los cambios de la rama que estamos intentando hacer el merge ya esta incluida
 en la rama en la cual estamos actualmente. 
 Esto quiere decir que la rama la cual estamos intentando absorver es padre de la rama actual, y no tiene sentido
-absorverla.
+absorberla.
 
 
 **- El merge del paso 19, ¿Causó algún conflicto? ¿Por qué?**
 
 Si, el merge del paso 19 causó un conflicto. Al intentar que la rama styled absorba la rama htmlify se encuentra 
 que el fichero git-nuestro.md es diferente en cada una de las ramas. Como no puede decidir que texto guardar,
-ha modificado el fichero git-nuestro.md con el contenido de las dos ramas.
+ha modificado el fichero git-nuestro.md con el contenido de las dos ramas, para que yo pueda resolver el conflicto
+manualmente :).
 
 
 **- El merge del paso 21, ¿Causó algún conflicto? ¿Por qué?**
 
-En este caso no se podria llamar que causó un conflicto. Cuando se intenta fusionar un commit con otro commit
+En este caso no es un conflicto. Cuando se intenta fusionar un commit con otro commit
 accesible upstream, git simplifica el merge avanzando el puntero ya que no hay ninguna otra rama divergente
 de trabajo. En otras palabras, ahora en la rama master, que se supone que es la principal, esta todo el trabajo
-realizado en la rama styled.
+realizado en la rama styled. Este es un merge fast forward.
 
 
 **- ¿Qué comando o comandos utilizaste en el paso 25?**
@@ -77,7 +78,7 @@ En el paso 27, para deshacer el cambio he utilizado el comando siguiente:
 git reset HEAD~1
 
 Como el merge del paso 26 era sin fast forward, se ha creado un commit que tiene como padre el commit master i el commit title.
-Desaciendo el último commit volveriamos al estado anterior. Como no he puesto --hard los cambios no se han perdido 
+Deshaciendo el último commit volveriamos al estado anterior. Como no he puesto --hard los cambios no se han perdido 
 
 
 **- ¿Qué comando o comandos utilizaste en el paso 28?**
