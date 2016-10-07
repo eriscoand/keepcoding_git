@@ -92,6 +92,8 @@ Con este comando lo que consigo es moverme al commit actual forzando la modifica
 rama title. Reseteando al commit actual, que es al que nos queremos quedar, y forzando la modificación, se descartaran los 
 cambios sobre el fichero.
 
+Aunque este comando me ha servido para llegar a la solucion, revisando la documentación he llegado a la conclusión que la mejor opción es usar el comando git ckechout -- git-nuestro.md para poder recuperar el fichero.
+
 
 **- ¿Qué comando o comandos utilizaste en el paso 29?**
 
